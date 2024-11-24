@@ -1,0 +1,119 @@
+.redirect-container {
+    text-align: center;
+    margin-top: 30px; /* Space at the top */
+  }
+  
+  .icon-circles {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between the circles */
+    margin-bottom: 20px; /* Space below the circles */
+    flex-wrap: wrap; /* Ensures icons wrap on smaller screens */
+  }
+  
+  .circle-icon {
+    width: 80px; /* Diameter of the circle */
+    height: 80px;
+    background-color: #000000;
+    border-radius: 50%; /* Makes the icon a circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .circle-icon:hover {
+    transform: scale(1.1); /* Slightly enlarges the circle on hover */
+  }
+  
+  .icon-image {
+    width: 60%; /* Adjust image size inside the circle */
+    height: 60%;
+    object-fit: cover; /* Ensures the image maintains its aspect ratio */
+  }
+  
+  .go-back-text {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .go-back-text:hover {
+    color: #007bff; /* Change text color on hover */
+  }
+  @media (max-width: 1111px) {
+    .circle-icon {
+      width: 50px; /* Reduce circle size for smaller screens */
+      height: 50px;
+    }
+    .redirect-container {
+        text-align: center;
+        margin-top: 10px; /* Space at the top */
+      }
+  
+    .icon-image {
+      width: 50%; /* Adjust image size inside the circle */
+      height: 50%;
+    }
+}
+@media (max-width: 900px) {
+    .circle-icon {
+      width: 60px; /* Reduce circle size for smaller screens */
+      height: 60px;
+    }
+    .redirect-container {
+        text-align: center;
+        margin-top: 30px; /* Space at the top */
+      }
+  
+    .icon-image {
+      width: 60%; /* Adjust image size inside the circle */
+      height: 60%;
+    }
+}
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .circle-icon {
+      width: 40px; /* Reduce circle size for smaller screens */
+      height: 40px;
+    }
+
+  
+    .icon-image {
+      width: 50%; /* Adjust image size inside the circle */
+      height: 50%;
+    }
+  
+    .icon-circles {
+      gap: 20px; /* Reduce spacing between circles */
+    }
+  
+    .go-back-text {
+      font-size: 16px; /* Adjust text size for smaller screens */
+      margin-top: 15px;
+      
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .circle-icon {
+      width: 50px; /* Further reduce circle size for very small screens */
+      height: 50px;
+    }
+  
+    .icon-image {
+      width: 40%; /* Adjust image size inside the circle */
+      height: 40%;
+    }
+  
+    .go-back-text {
+      font-size: 14px; /* Adjust text size further */
+    }
+  }
+  

@@ -1,0 +1,73 @@
+/* Parent Container */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Grid Container */
+.contact-grid-entry-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Five equal columns (default) */
+    grid-template-rows: repeat(5, 1fr); /* Five equal rows (default) */
+    gap: 2rem; /* Space between grid items */
+    height: 90vh; /* Full height of the viewport */
+    width: 90vw; /* Full width of the viewport */
+    padding: 16px; /* Padding around the grid */
+    box-sizing: border-box; /* Ensure padding is included in dimensions */
+    justify-content: center; /* Center grid in the container */
+}
+
+.contact-info {
+    grid-column: span 3 / span 3;
+    grid-row: span 5 / span 5;
+}
+.additional-details {
+    grid-column: span 2 / span 2;
+    grid-column-start: 4;
+}
+.recent-activity {
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-column-start: 4;
+    grid-row-start: 2;
+    background-color: #ffd700; /* Light green */
+    border-radius: 10px;   /* Optional: Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds shadow to the image */
+}
+.final-notes {
+    grid-column: span 2 / span 2;
+    grid-column-start: 4;
+    grid-row-start: 5;
+    background-color: #ffd700; /* Gold */
+    border-radius: 10px;   /* Optional: Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds shadow to the image */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .contact-grid-entry-container {
+        grid-template-columns: 1fr; /* Single-column layout */
+        grid-template-rows: auto; /* Adjust rows based on content */
+        gap: 2rem; /* Adjust spacing for smaller screens */
+    }
+
+    .additional-details {
+        grid-column: auto; /* Take full width */
+        grid-row: 1; /* Position at the top */
+    }
+    .contact-info {
+        grid-column: auto; /* Take full width */
+        grid-row: 2; /* Position below Additional Details */
+    }
+    .recent-activity {
+        grid-column: auto; /* Take full width */
+        grid-row: 3; /* Position in the middle */
+    }
+    .final-notes {
+        grid-column: auto; /* Take full width */
+        grid-row: 4; /* Position at the bottom */
+    }
+}

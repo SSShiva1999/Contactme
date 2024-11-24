@@ -1,0 +1,52 @@
+.social-media-container {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .social-media-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .social-media-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensure it wraps when the screen is smaller */
+  }
+  
+  .icon-circle {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .icon-image {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+  }
+  
+  /* Media Query for Smaller Screens */
+  @media (max-width: 768px) {
+    .social-media-icons {
+      justify-content: center;
+      gap: 15px;
+    }
+    
+    .icon-circle {
+      width: 40px; /* Slightly smaller icons on smaller screens */
+      height: 40px;
+    }
+  
+    .icon-image {
+      width: 25px; /* Adjust icon size for better fit */
+      height: 25px;
+    }
+  }
+  
